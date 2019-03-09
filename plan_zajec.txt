@@ -1,0 +1,49 @@
+Poniewaz na koniec zajec powinnismy pozostac ze skonczona aplikacja, przedmioty "wizualizacja danych" i "zaawansowane narzedzia analityczne" beda sie troche przeplatac. Oczywiscie bedziemy robic krótki wstep do wszystkich technologii, których bedziemy chcieli uzywac.
+
+Co nalezy opanowac, zeby wyniesc z zajec jak najwiecej?
+  - SQL (na poziomie "rozumiem co robi group by i joiny")
+  - pakiet dplyr na poziomie podobnym do tego wyzej
+  - mile widziana jest tez umiejetnosc obslugi innych pakietów ze swiata tidyverse (zwlaszcza tidyr, mile widziany jest tez purrr aczkolwiek dzialanie na nim wymaga zaawansowania)
+  - dowiedziec sie, czym sa technologie chmurowe oraz najlepiej stworzyc sobie konto na Google Cloud (lub innej platformie, np. AWS lub Azure lub DigitalOcean). Polecam GCP ze wzgledu na to, ze przy nim bedziemy pracowac na projekcie
+
+Teoria wizualizacji:
+  - czym jest wizualizacja danych (nieoczywiste pytanie)
+  - jakie sa rodzaje wizualizacji i kiedy sa stosowane
+  - jakie sa cechy dobrej wizualizacji
+  - workflow przy budowaniu aplikacji analitycznych + slowniczek biznesowy
+  - róznica miedzy BI a Data Science
+  - drag'n'drop vs coded visualisation - narzedzia, biblioteki, oraz w jakich okolicznosciach uzywa sie jakich narzedzi
+  - grammar of graphics - co to, jak sie uzywa i dlaczego jest tak istotne w programowaniu
+
+Wizualizacja typu drag'n'drop
+  - krótki przeglad dostepnych narzedzi (Tableau, Power BI, Google Data Studio etc.)
+  - przyklad dashboardu w Google Data Studio
+Wizualizacja w R
+  - biblioteki - porównanie zalet i wad; wprowadzenie
+  - graphics (skrótowo)
+  - lattice (skrótowo)
+  - igraph (skrótowo)
+  - ggplot2 (doglebnie)
+  - ggvis (raczej skrótowo)
+  - plotly (doglebnie)
+  - biblioteki do wizualizacji sieci i struktur hierarchicznych (np. visNetwork, networkD3)
+
+Budowa aplikacji analitycznej - teoria
+	- Data warehouse vs data lake
+	- Technologie bazodanowe I ich zastosowanie
+	- Co to wlasciwie jest NoSQL
+	- Co to jest kontrola wersji? (Git)
+	- Jak wyglada typowy schemat dashboardu, czym jest backend, czym jest frontend?
+	- Testy - czym sa, po co sa I dlaczego sa niezbedne przy budowaniu aplikacji?
+
+Technologie wykorzystywane 
+	- BigQuery - hurtownia duzych danych
+	- CloudSQL - hurtownia frontendowa
+	- Shiny - kurs zaawansowany
+
+Budowa aplikacji analitycznej - praktyka
+	- Ustawienie serwera dla Shiny
+	- Budowa aplikacji z wykorzystaniem bibliotek I technologii, które poznalismy
+
+"Egzamin"
+	
