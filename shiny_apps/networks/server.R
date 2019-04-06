@@ -3,6 +3,7 @@ library(shiny)
 library(bigrquery)
 library(dplyr)
 library(visNetwork)
+source("env_vars.R")
 
 # Define server logic required to draw a histogram
 shinyServer(function(input, output) {
@@ -10,8 +11,10 @@ shinyServer(function(input, output) {
   con = createConnection()
   nodes = getNodes(con)
   edges = getEdges(con)
-  output$network = renderVisNetwork({
-      visualiseGraph(nodes, edges)
+  observeEvent(input$start, {
+    output$network = renderVisNetwork({
+      visualiseGraph(createRandomGrouping(nodes), edges)
     }
-  )
+    )
+  })
 })

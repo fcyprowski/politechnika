@@ -20,10 +20,18 @@ getNodes = function(con) {
 visualiseGraph = function(nodes, edges) {
   visNetwork(nodes, edges) %>%
     # visClusteringByGroup(nodes_with_grouping$group)  # pająk
-    # visGroups(groupname = "4", color = "red") %>%
+    # visGroups(groupname = "A", color = "red") %>%
     visEdges(arrows = "from") %>%
     visOptions(highlightNearest = list(
       enabled = TRUE,
       degree = -Inf
     ))
+}
+createRandomGrouping = function(nodes) {
+  nodes %>%
+    mutate(
+      group = sample(
+        c("A", "B", "C"),
+        nrow(.),
+        replace = T))
 }
