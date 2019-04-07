@@ -37,3 +37,6 @@ readModel = function() {
   file.remove(model_filename)
   return(model)
 }
+funkcja = function() {
+  
+}
