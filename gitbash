@@ -1,0 +1,3 @@
+################## GIT BASH
+git clone https://github.com/fcyprowski/politechnika.git
+git push origin master
