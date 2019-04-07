@@ -5,8 +5,11 @@ simulate = function(input_df) {
     has_name(input_df, "creative_id"),
     has_name(input_df, "n")
   )
-  model = readRDS("../../../model.rds")
+  model = readModel()
   predictions = predict(model, input_df) %>%
     sum()
   return(predictions)
+}
+readModel = function() {
+  readRDS("../../../model.rds")
 }
