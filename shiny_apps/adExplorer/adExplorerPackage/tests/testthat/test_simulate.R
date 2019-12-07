@@ -6,7 +6,6 @@ googleAuthR::gar_auth_service(
   auth_location, 
   scope = "https://www.googleapis.com/auth/devstorage.full_control"
 )
-
 test_that("simulate zwraca jedna wartosc i nie moze to byc wartosc ujemna", {
   output = simulate(input_df)
   expect_is(output, "numeric")

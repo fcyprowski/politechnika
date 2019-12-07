@@ -37,6 +37,6 @@ readModel = function() {
   file.remove(model_filename)
   return(model)
 }
-funkcja = function() {
-  
+readModel = function() {
+  readRDS("../../../model.rds")
 }
