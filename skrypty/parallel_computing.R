@@ -62,7 +62,20 @@ context %>%
 
 install.packages("h2o")
 library(h2o)
-h2o_cl = h2o.init()
-path = "C:/DATA/Airlines_87_08/2008.csv"
-air2008.hex = h2o.uploadFile(path = path)
+h2o.init()
+ir = h2o.uploadFile("iris.csv", "iris")
+ir$Species = as.factor(ir$Species)
+
+splitlist = h2o.splitFrame(ir)
+training = splitlist[[1]]
+testing = splitlist[[2]]
+
+model = h2o.randomForest(
+  x = names(ir)[2:5],
+  y = "Species",
+  training_frame = training, 
+  model_id = "random_forest_1",
+  seed = 1
+)
+h2o.performance(model, testing, valid = TRUE)
 
